@@ -1,0 +1,26 @@
+name: MicLoSInquirer
+version: '${project.version}'
+main: net.syobonoon.plugin.miclosinquirer.MicLoSInquirer
+api-version: 1.15
+
+commands:
+  dinq:
+    description: You can get a Inquirer.
+    permission: miclosinquirer.dinq
+    permission-message: You don't have <permission>
+    usage: /<command>
+  dainaiinqreload:
+    description: reload plugin.
+    permission: miclosinquirer.reload
+    permission-message: You don't have <permission>
+    usage: /<command>
+
+permissions:
+  miclosinquirer.*:
+    children:
+      miclosinquirer.dinq: true
+      miclosinquirer.reload: true
+  miclosinquirer.dinq:
+    default: true
+  miclosinquirer.reload:
+    default: op
